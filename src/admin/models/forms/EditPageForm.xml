@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="main">
+        <fieldset name="primaryfieldset">
+            <field
+                    type="text"
+                    name="my_text_field"
+                    id="myTextField"
+                    label="MY TEXT FIELD LABEL"
+                    description="MY TEXT FIELD DESCRIPTION"
+                    size="80"
+                    maxLength="255" />
+            <field
+                    type="text"
+                    name="my_other_text_field"
+                    id="myOtherTextField"
+                    label="MY OTHER TEXT FIELD LABEL"
+                    description="MY OTHER TEXT FIELD DESCRIPTION"
+                    size="80"
+                    maxLength="255" />
+            <field
+                    type="editor"
+                    name="my_editor_field"
+                    id="myEditorField"
+                    label="MY EDITOR FIELD LABEL"
+                    description="MY EDITOR FIELD DESCRIPTION"
+                    rows="5"
+                    cols="200"/>
+        </fieldset>
+        <fieldset name="secondaryfieldset">
+            <field
+                    type="radio"
+                    name="my_radio_field"
+                    id="myRadioField"
+                    label="MY RADIO FIELD LABEL"
+                    description="MY RADIO FIELD DESCRIPTION">
+                <option value="0">YES</option>
+                <option value="1">NO</option>
+            </field>
+        </fieldset>
+    </fields>
+    <fields name="immutable">
+        <!-- Fieldsets go here -->
+    </fields>
+    <fields name="extra">
+        <fieldset name="publishing">
+            <field
+                    name="created"
+                    type="calendar"
+                    label="CREATED"
+                    description="MY CREATED DESCRIPTION"
+                    class="inputbox" size="20"
+                    format="%Y-%m-%d %H:%M:%S"
+                    filter="user_utc" />
+            <field
+                    name="created_by"
+                    type="user"
+                    label="CREATED BY"
+                    description="CREATED BY DESCRIPTION" />
+            <field
+                    name="created_by_alias"
+                    type="text"
+                    label="CREATED BY ALIAS"
+                    description="CREATED BY ALIAS DESCRIPTION"
+                    class="inputbox"
+                    size="20" />
+        </fieldset>
+        <fieldset name="metadata">
+            <field
+                    name="metakey"
+                    type="textarea"
+                    label="KEYWORDS"
+                    description="KEYWORDS DESCRIPTION"
+                    class="inputbox"
+                    rows="3"
+                    cols="30" />
+            <field
+                    name="metadesc"
+                    type="textarea"
+                    label="DESCRIPTION"
+                    description="DESCRIPTION DESCRIPTION"
+                    class="inputbox"
+                    rows="3"
+                    cols="30" />
+        </fieldset>
+    </fields>
+</form>

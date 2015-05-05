@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>AQJFORM</name>
+	<author>Ali Ghanavatian</author>
+	<creationDate>2015</creationDate>
+	<copyright>Copyright 2015 Ali Ghanavatian. All rights reserved.	</copyright>
+	<license>GNU General Public License version 3 or later.</license>
+	<authorEmail>ghanavatian.ali@gmail.com</authorEmail>
+	<authorUrl>http://aqlinux.ir</authorUrl>
+	<version>1.0</version>
+	<description>COM_AQJFORM_XML_DESCRIPTION</description>
+	
+	<files folder="site" >
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>aqjform.php</filename>
+	</files>
+
+	<administration>
+		<files folder="admin">
+			<filename>aqjform.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+		<menu>AQJFORM</menu>
+	</administration>
+</extension>
