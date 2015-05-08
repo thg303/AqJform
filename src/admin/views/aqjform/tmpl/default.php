@@ -31,34 +31,35 @@ $form = JForm::getInstance('jform', JPATH_COMPONENT.DS.'models'.DS.'forms'.DS.'E
         <legend>
             <?php echo JText::_($fieldset->name.'_jform_fieldset_label'); ?>
         </legend>
+        
         <!-- Fields go here -->
-    </fieldset>
+		<dl>
+			<?php
+			// Iterate through the fields and display them.
+			foreach($form->getFieldset($fieldset->name) as $field):
+			// If the field is hidden, only use the input.
+			if ($field->hidden):
+			echo $field->input;
+			else:
+			?>
+			<dt>
+				<?php echo $field->label; ?>
+			</dt>
+			<dd
+			<?php echo ($field->type == 'Editor' || $field->type == 'Textarea') ? ' style="clear: both; margin: 0;"' : ''?>>
+				<?php echo $field->input ?>
+			</dd>
+			<?php
+			endif;
+			endforeach;
+			?>
+		</dl>
+
+	</fieldset>
     <?php
     endforeach;
     ?>
 </div>
-
-
-<dl>
-<?php
-// Iterate through the fields and display them.
-foreach($form->getFieldset($fieldset->name) as $field):
-    // If the field is hidden, only use the input.
-    if ($field->hidden):
-        echo $field->input;
-    else:
-    ?>
-    <dt>
-        <?php echo $field->label; ?>
-    </dt>
-    <dd<?php echo ($field->type == 'Editor' || $field->type == 'Textarea') ? ' style="clear: both; margin: 0;"' : ''?>>
-        <?php echo $field->input ?>
-    </dd>
-    <?php
-    endif;
-endforeach;
-?>
-</dl>
 
 
 <!-- extra fieldsets -->
