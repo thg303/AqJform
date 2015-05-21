@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
     <fields name="main">
-        <fieldset name="primaryfieldset">
+        <fieldset name="primaryfieldset" label="primaryfieldset">
             <field
                     type="text"
                     name="my_text_field"
@@ -27,7 +27,7 @@
                     rows="5"
                     cols="200"/>
         </fieldset>
-        <fieldset name="secondaryfieldset">
+        <fieldset name="secondaryfieldset" label="secondaryfieldset">
             <field
                     type="radio"
                     name="my_radio_field"
@@ -43,7 +43,7 @@
         <!-- Fieldsets go here -->
     </fields>
     <fields name="extra">
-        <fieldset name="publishing">
+        <fieldset name="publishing" label="publishing">
             <field
                     name="created"
                     type="calendar"
@@ -65,7 +65,7 @@
                     class="inputbox"
                     size="20" />
         </fieldset>
-        <fieldset name="metadata">
+        <fieldset name="metadata" label="metadata">
             <field
                     name="metakey"
                     type="textarea"
