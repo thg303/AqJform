@@ -29,7 +29,7 @@ $form = JForm::getInstance('jform', JPATH_COMPONENT.DS.'models'.DS.'forms'.DS.'E
     ?>
     <fieldset class="adminform">
         <legend>
-            <?php echo JText::_($fieldset->name.'_jform_fieldset_label'); ?>
+            <?php echo $fieldset->label; ?>
         </legend>
         
         <!-- Fields go here -->
